@@ -6,41 +6,41 @@ using System.Threading.Tasks;
 
 namespace SchoolManagementSystemBO
 {
-    
+
     /// <summary>
     /// Student Properties
     /// </summary>
-    public class SrvSectionProperties
+    public class SrvSessionProperties
     {
-        public int SectionID { get; set; }
+        public int SessionID { get; set; }
 
-        public string Section { get; set; }
+        public string Session { get; set; }
     }
-    public class SrvSectionReturnMessage
+    public class SrvSessionReturnMessage
     {
         public SrvMessage Message { get; set; }
 
-        public SrvSectionReturnMessage()
-        {
-            Message = new SrvMessage();
-        }
-
-    }
-
-    public class SrvSectionInfo
-    {
-        public SrvMessage Message { get; set; }
-
-        public int SectionID { get; set; }
-
-        public string Section { get; set; }
-        public SrvSectionInfo()
+        public SrvSessionReturnMessage()
         {
             Message = new SrvMessage();
         }
     }
 
-    public class SrvSectionParams : SrvListParams
+    public class SrvSessionInfo
+    {
+        public SrvMessage Message { get; set; }
+
+        public int SessionID { get; set; }
+
+        public string Session { get; set; }
+
+        public SrvSessionInfo()
+        {
+            Message = new SrvMessage();
+        }
+    }
+
+    public class SrvSessionParams : SrvListParams
     {
         public string Filter { get; set; }
 
@@ -53,16 +53,16 @@ namespace SchoolManagementSystemBO
     /// <summary>
     /// Displaying List Items
     /// </summary>
-    public class SrvSectionInfoListData : SrvListData
+    public class SrvSessionInfoListData : SrvListData
     {
-        public List<SrvSection> aaData { get; set; }
+        public List<SrvSession> aaData { get; set; }
     }
 
-    public class SrvSection
+    public class SrvSession
     {
-        public int SectionID { get; set; }
+        public int SessionID { get; set; }
 
-        public string Section { get; set; }
+        public string Session { get; set; }
     }
 
 

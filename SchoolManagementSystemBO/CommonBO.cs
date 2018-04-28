@@ -7,19 +7,9 @@ using System.Threading.Tasks;
 namespace SchoolManagementSystemBO
 {
    
-    public class SrvListParam
+    public class SrvListParams
      {
-            //public string sEcho { get; set; }
-
-            //public int iDisplayLength { get; set; }
-            //public int iDisplayStart { get; set; }
-            //public int iSortCol_0 { get; set; }
-
-            //public string sSortDir_0 { get; set; }
-
-
-            //public string sSearch { get; set; }
-
+        public int UserId { get; set; }
         public string SearchText { get; set; }
 
         public string SortColumn { get; set; }
@@ -29,12 +19,27 @@ namespace SchoolManagementSystemBO
         public int PageRecords { get; set; }
                 
         }
+    public class SrvListData
+    {
 
+        private long lngTotalRecords { get; set; }
+        public SrvMessage Message { get; set; }
+        public int sEcho { get; set; }
+        public long iTotalRecords { get; set; }
+        public long iTotalDisplayRecords { get; set; }
+         public SrvListData()
+        {
+            Message = new SrvMessage();
+        }
+
+    }
     public class SrvRenderSelect
     {
         public string ItemText { get; set; }
 
         public string ItemValue { get; set; }
+        public string ItemGroup { get; set; }
+        public string ItemAlternateText { get; set; }
 
     }
     public enum ActionMode

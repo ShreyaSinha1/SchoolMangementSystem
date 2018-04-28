@@ -23,7 +23,7 @@ namespace SchoolManagementSystemBO
         }
     }
 
-    public class SrvSchoolTypeListData:SrvListParam
+    public class SrvSchoolTypeListData:SrvListParams
     {
         public  List<SrvSchoolTypeInfo> SchoolType { get; set; }
     }
